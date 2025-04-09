@@ -1,4 +1,5 @@
-const infou = require("../db/usuario");
+
+const infou = require ("../db/usuario")
 
 const mainController={
 

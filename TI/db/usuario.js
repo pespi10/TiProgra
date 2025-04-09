@@ -5,7 +5,7 @@ const infou = {
         contraseña: "123456",
         fechaNacimiento: "1990-05-15",
         documento: "31456789",
-        fotoPerfil: "/images/users/default-image.png"
+        fotoPerfil: "/images/users/trala.png",
     },
 
     productos: [
