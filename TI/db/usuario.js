@@ -1,11 +1,11 @@
 const infou = {
     usuario: {
         nombre: "Juan Pérez",
-        email: "juan.perez@example.com",
+        email: "juan.perez@gmail.com",
         contraseña: "123456",
-        fecha_nacimiento: "1990-05-15",
+        fechaNacimiento: "1990-05-15",
         documento: "31456789",
-        foto_perfil: "/images/users/default-image.png"
+        fotoPerfil: "/images/users/default-image.png"
     },
 
     productos: [
@@ -17,17 +17,17 @@ const infou = {
                 {
                     usuario: "Ana García",
                     userComment: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-                    imagen_perfil: "/images/users/default-image.png"
+                    imagenPerfil: "/images/users/default-image.png"
                 },
                 {
                     usuario: "Carlos López",
                     userComment: "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-                    imagen_perfil: "/images/users/default-image.png"
+                    imagenPerfil: "/images/users/default-image.png"
                 },
                 {
                     usuario: "María Rodríguez",
                     userComment: "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
-                    imagen_perfil: "/images/users/default-image.png"
+                    imagenPerfil: "/images/users/default-image.png"
                 }
             ]
         },
@@ -39,17 +39,17 @@ const infou = {
                 {
                     usuario: "Ana García",
                     userComment: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-                    imagen_perfil: "/images/users/default-image.png"
+                    imagenPerfil: "/images/users/default-image.png"
                 },
                 {
                     usuario: "Carlos López",
                     userComment: "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-                    imagen_perfil: "/images/users/default-image.png"
+                    imagenPerfil: "/images/users/default-image.png"
                 },
                 {
                     usuario: "María Rodríguez",
                     userComment: "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
-                    imagen_perfil: "/images/users/default-image.png"
+                    imagenPerfil: "/images/users/default-image.png"
                 }
             ]
         },
@@ -61,17 +61,17 @@ const infou = {
                 {
                     usuario: "Ana García",
                     userComment: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-                    imagen_perfil: "/images/users/default-image.png"
+                    imagenPerfil: "/images/users/default-image.png"
                 },
                 {
                     usuario: "Carlos López",
                     userComment: "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-                    imagen_perfil: "/images/users/default-image.png"
+                    imagenPerfil: "/images/users/default-image.png"
                 },
                 {
                     usuario: "María Rodríguez",
                     userComment: "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
-                    imagen_perfil: "/images/users/default-image.png"
+                    imagenPerfil: "/images/users/default-image.png"
                 }
             ]
         },
@@ -83,149 +83,149 @@ const infou = {
                 {
                     usuario: "Ana García",
                     userComment: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-                    imagen_perfil: "/images/users/default-image.png"
+                    imagenPerfil: "/images/users/default-image.png"
                 },
                 {
                     usuario: "Carlos López",
                     userComment: "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-                    imagen_perfil: "/images/users/default-image.png"
+                    imagenPerfil: "/images/users/default-image.png"
                 },
                 {
                     usuario: "María Rodríguez",
                     userComment: "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
-                    imagen_perfil: "/images/users/default-image.png"
+                    imagenPerfil: "/images/users/default-image.png"
                 }
             ]
         },
         {
-            imagen: "/images/products/img-heladera-whirlpool.jpg",
-            nombre: "Heladera Whirlpool No Frost",
-            descripcion: "Heladera con freezer superior, 375 litros, tecnología No Frost, dispensador de agua",
+            imagen: "/images/products/",
+            nombre: "",
+            descripcion: "",
             comentarios: [
                 {
                     usuario: "Ana García",
                     userComment: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-                    imagen_perfil: "/images/users/default-image.png"
+                    imagenPerfil: "/images/users/default-image.png"
                 },
                 {
                     usuario: "Carlos López",
                     userComment: "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-                    imagen_perfil: "/images/users/default-image.png"
+                    imagenPerfil: "/images/users/default-image.png"
                 },
                 {
                     usuario: "María Rodríguez",
                     userComment: "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
-                    imagen_perfil: "/images/users/default-image.png"
+                    imagenPerfil: "/images/users/default-image.png"
                 }
             ]
         },
         {
-            imagen: "/images/products/img-camara-nikon.jpg",
-            nombre: "Cámara Nikon D3500",
-            descripcion: "Cámara réflex digital con sensor CMOS de 24.2 MP, grabación de video Full HD",
+            imagen: "/images/products/",
+            nombre: "",
+            descripcion: "",
             comentarios: [
                 {
                     usuario: "Ana García",
                     userComment: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-                    imagen_perfil: "/images/users/default-image.png"
+                    imagenPerfil: "/images/users/default-image.png"
                 },
                 {
                     usuario: "Carlos López",
                     userComment: "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-                    imagen_perfil: "/images/users/default-image.png"
+                    imagenPerfil: "/images/users/default-image.png"
                 },
                 {
                     usuario: "María Rodríguez",
                     userComment: "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
-                    imagen_perfil: "/images/users/default-image.png"
+                    imagenPerfil: "/images/users/default-image.png"
                 }
             ]
         },
         {
-            imagen: "/images/products/img-microondas-atma.jpg",
-            nombre: "Microondas Atma 20 litros",
-            descripcion: "Microondas digital con 700W de potencia, plato giratorio, 8 niveles de potencia",
+            imagen: "/images/products/",
+            nombre: "",
+            descripcion: "",
             comentarios: [
                 {
                     usuario: "Ana García",
                     userComment: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-                    imagen_perfil: "/images/users/default-image.png"
+                    imagenPerfil: "/images/users/default-image.png"
                 },
                 {
                     usuario: "Carlos López",
                     userComment: "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-                    imagen_perfil: "/images/users/default-image.png"
+                    imagenPerfil: "/images/users/default-image.png"
                 },
                 {
                     usuario: "María Rodríguez",
                     userComment: "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
-                    imagen_perfil: "/images/users/default-image.png"
+                    imagenPerfil: "/images/users/default-image.png"
                 }
             ]
         },
         {
-            imagen: "/images/products/img-play-station-4.jpg",
-            nombre: "PlayStation 4 Slim 1TB",
-            descripcion: "Consola de videojuegos con 1TB de almacenamiento, incluye joystick inalámbrico",
+            imagen: "/images/products/",
+            nombre: "",
+            descripcion: "",
             comentarios: [
                 {
                     usuario: "Ana García",
                     userComment: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-                    imagen_perfil: "/images/users/default-image.png"
+                    imagenPerfil: "/images/users/default-image.png"
                 },
                 {
                     usuario: "Carlos López",
                     userComment: "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-                    imagen_perfil: "/images/users/default-image.png"
+                    imagenPerfil: "/images/users/default-image.png"
                 },
                 {
                     usuario: "María Rodríguez",
                     userComment: "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
-                    imagen_perfil: "/images/users/default-image.png"
+                    imagenPerfil: "/images/users/default-image.png"
                 }
             ]
         },
         {
-            imagen: "/images/products/img-bicicleta-mountain.jpg",
-            nombre: "Bicicleta Mountain Bike Rodado 29",
-            descripcion: "Bicicleta con cuadro de aluminio, 21 velocidades, frenos a disco, suspensión delantera",
+            imagen: "/images/products/",
+            nombre: "",
+            descripcion: "",
             comentarios: [
                 {
                     usuario: "Ana García",
                     userComment: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-                    imagen_perfil: "/images/users/default-image.png"
+                    imagenPerfil: "/images/users/default-image.png"
                 },
                 {
                     usuario: "Carlos López",
                     userComment: "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-                    imagen_perfil: "/images/users/default-image.png"
+                    imagenPerfil: "/images/users/default-image.png"
                 },
                 {
                     usuario: "María Rodríguez",
                     userComment: "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
-                    imagen_perfil: "/images/users/default-image.png"
+                    imagenPerfil: "/images/users/default-image.png"
                 }
             ]
         },
         {
-            imagen: "/images/products/img-aire-acondicionado.jpg",
-            nombre: "Aire Acondicionado Split Inverter Surrey 3200W",
-            descripcion: "Aire acondicionado frío/calor, tecnología Inverter, bajo consumo energético, clase A",
+            imagen: "/images/products/",
+            nombre: "",
+            descripcion: "",
             comentarios: [
                 {
                     usuario: "Ana García",
                     userComment: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-                    imagen_perfil: "/images/users/default-image.png"
+                    imagenPerfil: "/images/users/default-image.png"
                 },
                 {
                     usuario: "Carlos López",
                     userComment: "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-                    imagen_perfil: "/images/users/default-image.png"
+                    imagenPerfil: "/images/users/default-image.png"
                 },
                 {
                     usuario: "María Rodríguez",
                     userComment: "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
-                    imagen_perfil: "/images/users/default-image.png"
+                    imagenPerfil: "/images/users/default-image.png"
                 }
             ]
         }

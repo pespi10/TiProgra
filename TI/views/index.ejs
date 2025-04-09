@@ -19,72 +19,65 @@
 			<div class="col-12">
 				<h2 class="products-title">productos</h2>
 			</div>
-			<!-- Show the "ultimos" products -->
+			<!-- Show the "ultimos" products -->			 
 			<div class="col-12 col-sm-6 col-lg-3">
 				<section class="product-box">
 				  <a href="/product">
 					<figure class="product-box_image">
-					  <img src="<%= productos.imagen %>" alt="<%= productos.nombre %>">
+					  <img src="<%= productos[0].imagen %>" alt="<%= productos[0].nombre %>">
 					</figure>
 					<article class="product-box_data">
-					  <h2><%= productos.nombre %></h2>
-					  <p><%= productos.descripcion %></p>
-					  <p>Comentarios: <% for( let i = 0; i < productos.comentarios.length; i++ ) { %>
-						<%= productos.comentarios[i].usuario %>
-						<%= productos.comentarios[i].userComment %>
-						<%= productos.comentarios[i].imagen_perfil %>
-					  
-					  <% } %></p>
+					  <h2><%= productos[0].nombre %></h2>
+					  <p><%= productos[0].descripcion %></p>
+					  <p>Comentarios: <%= productos[0].comentarios.length %></p>
 					</article>
 				  </a>
 				</section>
 			  </div>
-			<div class="col-12 col-sm-6 col-lg-3">
+			  <div class="col-12 col-sm-6 col-lg-3">
 				<section class="product-box">
-					<a href="/product">
-						<figure class="product-box_image">
-							<img src="/images/products/img-samsung-galaxy-s10.jpg" alt="cafetera moulinex">
-						</figure>
-						<article class="product-box_data">
-							<h2>Nombre del productos</h2>
-							<p>Descripción corta del productos Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eaque
-								delectus ex</p>
-							<p>Comentarios: 12</p>
-						</article>
-					</a>
+				  <a href="/product">
+					<figure class="product-box_image">
+					  <img src="<%= productos[1].imagen %>" alt="<%= productos[1].nombre %>">
+					</figure>
+					<article class="product-box_data">
+					  <h2><%= productos[1].nombre %></h2>
+					  <p><%= productos[1].descripcion %></p>
+					  <p>Comentarios: <%= productos[1].comentarios.length %></p>
+					</article>
+				  </a>
 				</section>
-			</div>
-			<div class="col-12 col-sm-6 col-lg-3">
+			  </div>
+			  <div class="col-12 col-sm-6 col-lg-3">
 				<section class="product-box">
-					<a href="/product">
-						<figure class="product-box_image">
-							<img src="/images/products/img-macbook-pro-2019.jpg" alt="cafetera moulinex">
-						</figure>
-						<article class="product-box_data">
-							<h2>Nombre del productos</h2>
-							<p>Descripción corta del productos Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eaque
-								delectus ex</p>
-							<p>Comentarios: 12</p>
-						</article>
-					</a>
+				  <a href="/product">
+					<figure class="product-box_image">
+					  <img src="<%= productos[2].imagen %>" alt="<%= productos[2].nombre %>">
+					</figure>
+					<article class="product-box_data">
+					  <h2><%= productos[2].nombre %></h2>
+					  <p><%= productos[2].descripcion %></p>
+					  <p>Comentarios: <%= productos[2].comentarios.length %></p>
+					</article>
+				  </a>
 				</section>
-			</div>
-			<div class="col-12 col-sm-6 col-lg-3">
+			  </div>
+			  <div class="col-12 col-sm-6 col-lg-3">
 				<section class="product-box">
-					<a href="/product">
-						<figure class="product-box_image">
-							<img src="/images/products/img-cafetera-moulinex.jpg" alt="cafetera moulinex">
-						</figure>
-						<article class="product-box_data">
-							<h2>Nombre del productos</h2>
-							<p>Descripción corta del productos Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eaque
-								delectus ex</p>
-							<p>Comentarios: 12</p>
-						</article>
-					</a>
+				  <a href="/product">
+					<figure class="product-box_image">
+					  <img src="<%= productos[3].imagen %>" alt="<%= productos[3].nombre %>">
+					</figure>
+					<article class="product-box_data">
+					  <h2><%= productos[3].nombre %></h2>
+					  <p><%= productos[3].descripcion %></p>
+					  <p>Comentarios: <%= productos[3].comentarios.length %></p>
+					</article>
+				  </a>
 				</section>
-			</div>
+			  </div>
 		</div>
+		
 	</div>
 
 
