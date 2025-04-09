@@ -17,23 +17,28 @@
 	<div class="container products-wrapper">
 		<div class="row">
 			<div class="col-12">
-				<h2 class="products-title">Productos</h2>
+				<h2 class="products-title">productos</h2>
 			</div>
 			<!-- Show the "ultimos" products -->
 			<div class="col-12 col-sm-6 col-lg-3">
 				<section class="product-box">
-					<a href="/product">
-						<figure class="product-box_image">
-							<img src="/images/products/img-tv-samsung-smart.jpg" alt="cafetera moulinex">
-						</figure>
-						<article class="product-box_data">
-							<h2>Nombre del producto</h2>
-							<p>Descripción corta del producto Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eaque delectus ex</p>
-							<p>Comentarios: 12</p>
-						</article>
-					</a>
+				  <a href="/product">
+					<figure class="product-box_image">
+					  <img src="<%= productos.imagen %>" alt="<%= productos.nombre %>">
+					</figure>
+					<article class="product-box_data">
+					  <h2><%= productos.nombre %></h2>
+					  <p><%= productos.descripcion %></p>
+					  <p>Comentarios: <% for( let i = 0; i < productos.comentarios.length; i++ ) { %>
+						<%= productos.comentarios[i].usuario %>
+						<%= productos.comentarios[i].userComment %>
+						<%= productos.comentarios[i].imagen_perfil %>
+					  
+					  <% } %></p>
+					</article>
+				  </a>
 				</section>
-			</div>
+			  </div>
 			<div class="col-12 col-sm-6 col-lg-3">
 				<section class="product-box">
 					<a href="/product">
@@ -41,8 +46,8 @@
 							<img src="/images/products/img-samsung-galaxy-s10.jpg" alt="cafetera moulinex">
 						</figure>
 						<article class="product-box_data">
-							<h2>Nombre del producto</h2>
-							<p>Descripción corta del producto Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eaque
+							<h2>Nombre del productos</h2>
+							<p>Descripción corta del productos Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eaque
 								delectus ex</p>
 							<p>Comentarios: 12</p>
 						</article>
@@ -56,8 +61,8 @@
 							<img src="/images/products/img-macbook-pro-2019.jpg" alt="cafetera moulinex">
 						</figure>
 						<article class="product-box_data">
-							<h2>Nombre del producto</h2>
-							<p>Descripción corta del producto Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eaque
+							<h2>Nombre del productos</h2>
+							<p>Descripción corta del productos Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eaque
 								delectus ex</p>
 							<p>Comentarios: 12</p>
 						</article>
@@ -71,8 +76,8 @@
 							<img src="/images/products/img-cafetera-moulinex.jpg" alt="cafetera moulinex">
 						</figure>
 						<article class="product-box_data">
-							<h2>Nombre del producto</h2>
-							<p>Descripción corta del producto Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eaque
+							<h2>Nombre del productos</h2>
+							<p>Descripción corta del productos Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eaque
 								delectus ex</p>
 							<p>Comentarios: 12</p>
 						</article>
@@ -99,7 +104,7 @@
 					<article class="footer-data">
 						<i class="fas fa-gift"></i>
 						<h2>Envío gratis desde $ 1.999</h2>
-						<p>Solo por estar registrado en Mercado Liebre tenés envíos gratis en miles de productos. Es un
+						<p>Solo por estar registrado en Mercado Liebre tenés envíos gratis en miles de productoss. Es un
 							beneficio de Mercado Puntos.</p>
 					</article>
 				</div>
