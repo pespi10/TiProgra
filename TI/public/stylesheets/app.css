@@ -532,18 +532,9 @@ textarea.form-input {
 
 /*====== cambios nuevos ======*/
 
-body {
-  font-family: 'Open Sans', sans-serif;
-}
-
 h1, h2, h3 {
   font-family: 'Orbitron', sans-serif;
 }
-
-a {
-  font-family: 'Montserrat', sans-serif;
-}
-
 
 body {
   background-color: var(--background-color);
@@ -572,3 +563,19 @@ a:hover {
   color: var(--primary-color);
   text-decoration: none;
 }
+
+.product-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 85%;
+  padding: 15px;
+}
+
+
+.product-box_data {
+  flex-direction: column;
+}
+
+
+
