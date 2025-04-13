@@ -10,9 +10,9 @@ const infou = {
 
     productos: [
         {
-            imagen: "/images/products/img-tv-samsung-smart.jpg",
-            nombre: "Smart TV Samsung 55 pulgadas",
-            descripcion: "TV LED, pantalla 4K Ultra HD, sistema operativo Tizen, conexión WiFi y Bluetooth",
+            imagen: "/images/products/teclado.png",
+            nombre: "Teclado inalambrico",
+            descripcion: "Swithces mecánicos, retroiluminado RGB, conexión USB-C",
             comentarios: [
                 {
                     usuario: "Ana García",
@@ -32,9 +32,9 @@ const infou = {
             ]
         },
         {
-            imagen: "/images/products/img-samsung-galaxy-s10.jpg",
-            nombre: "Samsung Galaxy S10",
-            descripcion: "Smartphone con pantalla AMOLED de 6.1 pulgadas, 8GB RAM, 128GB almacenamiento",
+            imagen: "/images/products/mouse.png",
+            nombre: "Mouse",
+            descripcion: "sensor optico de alta precisión, luces LED RGB, 16000 DPI",
             comentarios: [
                 {
                     usuario: "Ana García",
@@ -54,9 +54,9 @@ const infou = {
             ]
         },
         {
-            imagen: "/images/products/img-macbook-pro-2019.jpg",
-            nombre: "MacBook Pro 2019",
-            descripcion: "Laptop con procesador Intel i7, 16GB RAM, 512GB SSD, pantalla Retina de 15 pulgadas",
+            imagen: "/images/products/monitor.png",
+            nombre: "Monitor curvo 4k",
+            descripcion: "Monitor curvo 4k de 32 pulgadas, 144Hz, FreeSync",
             comentarios: [
                 {
                     usuario: "Ana García",
@@ -76,9 +76,9 @@ const infou = {
             ]
         },
         {
-            imagen: "/images/products/img-cafetera-moulinex.jpg",
-            nombre: "Cafetera Moulinex",
-            descripcion: "Cafetera automática con sistema de presión de 15 bares, capacidad para 1.5 litros",
+            imagen: "/images/products/notebook.png",
+            nombre: "Notebook",
+            descripcion: "Notebook HP 15, i5, 8GB RAM, 512GB SSD",
             comentarios: [
                 {
                     usuario: "Ana García",
