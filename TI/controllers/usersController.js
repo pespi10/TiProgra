@@ -1,7 +1,6 @@
 const usuario = require ("../db/usuario")
 const productos = require ("../db/productos")
 
-
 const usersController = {
     login: function(req, res) {
         res.render('login',{usuario:usuario, productos:productos});
