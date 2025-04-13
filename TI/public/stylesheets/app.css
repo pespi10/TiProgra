@@ -1,18 +1,15 @@
-/*====== Fonts ======*/
+/* ====== Fonts ======*/
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Open+Sans&family=Orbitron&display=swap');
 
 
 /*====== Variables ======*/
 :root {
-  --yellow: #EAC926;
-  --dark-blue: #03264C;
-  --light-blue: #1259c3;
-  --gray: #666666;
-  --light-gray: #ebebeb;
-  --green: #39b54a;
-  --base-font-family: 'Roboto', sans-serif
+  --primary-color: #ff6f00;
+  --secondary-color: #2e2e2e;   
+  --background-color: #f5f5f5;  
+  --text-color: #212121;        
+  --hover-color: #ffcc80;       
 }
-
 
 /*====== Basics ======*/
 * {
@@ -29,7 +26,7 @@ body {
 body {
   font-family: var(--base-font-family);
   font-weight: 300;
-  background-color: var(--light-gray);
+  background-color: var(--background-color);
 }
 
 ul,
@@ -68,7 +65,7 @@ hr {
 /*====== Main Header ======*/
 .main-header {
   padding: 15px 0;
-  background-color: var(--yellow);
+  background-color: var(--secondary-color);
 }
 
 .main-header_home-link,
@@ -108,6 +105,9 @@ hr {
   color: var(--gray);
   cursor: pointer;
 }
+
+
+
 
 
 /*====== Main Navbar ======*/
@@ -527,4 +527,48 @@ textarea.form-input {
     width: 95%;
     margin: auto;
   }
+}
+
+
+/*====== cambios nuevos ======*/
+
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+
+h1, h2, h3 {
+  font-family: 'Orbitron', sans-serif;
+}
+
+a {
+  font-family: 'Montserrat', sans-serif;
+}
+
+
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  font-family: 'Open Sans', sans-serif;
+}
+
+header, footer {
+  background-color: var(--secondary-color);
+  color: var(--text-color);
+}
+
+a {
+  color: var(--primary-color);
+  text-decoration: underline;
+  font-family: 'Montserrat', sans-serif;
+}
+
+a:hover {
+  color: var(--hover-color);
+}
+
+.site-name {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 2.5rem;
+  color: var(--primary-color);
+  text-decoration: none;
 }
