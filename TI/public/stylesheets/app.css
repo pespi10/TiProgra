@@ -438,6 +438,9 @@ hr {
 .comments .user{
   font-size: 1.7em;
 }
+.d-flex a{
+  text-decoration: none;
+}
 
 /*====== Formularios ======*/
 .form-label {
