@@ -266,6 +266,12 @@ hr {
   transform: rotate(360deg);
   box-shadow: 0 0 5px var(--green);
 }
+.product-detail-description a{
+  text-decoration: none;
+}
+.user a{
+  text-decoration: none;
+}
 
 /*====== Footer ======*/
 .main-footer {
@@ -431,6 +437,9 @@ hr {
 }
 .comments .user{
   font-size: 1.7em;
+}
+.d-flex a{
+  text-decoration: none;
 }
 
 /*====== Formularios ======*/
