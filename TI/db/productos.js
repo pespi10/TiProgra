@@ -88,9 +88,9 @@ const productos = [
         ]
     },
     {
-        imagen: "/images/products/",
-        nombre: "",
-        descripcion: "",
+        imagen: "/images/products/smartwatch.jpg",
+        nombre: "smartwatch",
+        descripcion: "pantalla AMOLED, GPS, monitor de ritmo cardiaco, waterproof",
         comentarios: [
             {
                 usuario: "Ana García",
@@ -110,9 +110,9 @@ const productos = [
         ]
     },
     {
-        imagen: "/images/products/",
-        nombre: "",
-        descripcion: "",
+        imagen: "/images/products/parlante.jpg",
+        nombre: "parlante inteligente",
+        descripcion: "Asistente de voz, bluetooth, sonido envolvente",
         comentarios: [
             {
                 usuario: "Ana García",
@@ -132,9 +132,9 @@ const productos = [
         ]
     },
     {
-        imagen: "/images/products/",
-        nombre: "",
-        descripcion: "",
+        imagen: "/images/products/auriculares.jpg",
+        nombre: "auriculares inalambricos",
+        descripcion: "cancelación de ruido activa, sonido envolvente, bluetooth",
         comentarios: [
             {
                 usuario: "Ana García",
@@ -154,9 +154,9 @@ const productos = [
         ]
     },
     {
-        imagen: "/images/products/",
-        nombre: "",
-        descripcion: "",
+        imagen: "/images/products/camara.jpg",
+        nombre: "camara de seguridad",
+        descripcion: "vision nocturna, detección de movimiento, grabación en la nube",
         comentarios: [
             {
                 usuario: "Ana García",
