@@ -176,9 +176,9 @@ const productos = [
         ]
     },
     {
-        imagen: "/images/products/",
-        nombre: "",
-        descripcion: "",
+        imagen: "/images/products/tablet.jpg",
+        nombre: "tablet",
+        descripcion: "pantalla 10 pulgadas, procesador octa-core, 64GB almacenamiento",
         comentarios: [
             {
                 usuario: "Ana García",
@@ -198,9 +198,9 @@ const productos = [
         ]
     },
     {
-        imagen: "/images/products/",
-        nombre: "",
-        descripcion: "",
+        imagen: "/images/products/impresora.jpg",
+        nombre: "impresora multifuncion",
+        descripcion: "impresora multifunción, impresión a color, scanner, wifi, impresión a doble cara",
         comentarios: [
             {
                 usuario: "Ana García",
