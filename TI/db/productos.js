@@ -221,4 +221,4 @@ const productos = [
     }
 ]
 
-Module.exports = productos;
+module.exports = productos;
