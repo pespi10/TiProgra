@@ -42,6 +42,7 @@ a {
   color: inherit;
 }
 
+
 figure {
   margin: 0;
   padding: 0;
@@ -105,7 +106,15 @@ hr {
   color: var(--gray);
   cursor: pointer;
 }
-
+.main-header_credit-link{
+  text-decoration: none;
+}
+.left-navbar li a{
+  text-decoration: none;
+}
+.right-navbar li a{
+  text-decoration: none;
+}
 
 
 
@@ -184,6 +193,7 @@ hr {
 
 .product-box a {
   display: block;
+  text-decoration: none;
 }
 
 .product-box_image {
