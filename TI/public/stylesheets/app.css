@@ -115,6 +115,9 @@ hr {
 .right-navbar li a{
   text-decoration: none;
 }
+.logout{
+  color:#ff6f00;
+}
 
 
 
@@ -149,7 +152,9 @@ hr {
 }
 
 .logout:hover{
-  color: #1259c3;
+  color: var(--hover-color);
+
+  
 }
 
 .left-navbar a,
@@ -163,11 +168,11 @@ hr {
 
 /*====== Banner ======*/
 .banner {
-  background-image: url(/images/img-home-banner.jpg);
+  background-image: url(/images/banner.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
-  height: 100px;
+
 }
 
 
@@ -271,6 +276,9 @@ hr {
 }
 .user a{
   text-decoration: none;
+}
+.products-wrapper .row{
+  margin-top:140px;
 }
 
 /*====== Footer ======*/
@@ -527,7 +535,7 @@ textarea.form-input {
 
   .left-navbar a:hover,
   .right-navbar a:hover {
-    color: var(--light-blue);
+    color: var(--hover-color);
   }
 
   .left-navbar li {
