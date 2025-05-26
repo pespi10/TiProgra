@@ -10,6 +10,7 @@ let usersController = {
     },
 
     create: function(req, res){
+        const username = req.body.username;
         const email = req.body.mail
         const password = req.body.contrasena
         const fecha = req.body.fecha
