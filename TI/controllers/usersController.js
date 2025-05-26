@@ -12,10 +12,23 @@ let usersController = {
         const fecha = req.body.fecha
         const dni = req.body.dni
         const foto = req.body.foto
-
-        if (password.length < 3) {
-            return res.send('La contraseña debe tener al menos 3 caracteres')
+        db.User.findOne({where:{email}})
+        .then(function(resultado)){
+            if (resultado){
+                return res.send('el usuario ya existe')
+            }
+            else if(resultado == null){
+                return res.send('Completa el campo')
+            }
+            else if (password.length < 3){
+                return res.send('Contra tiene que tener mas de 3 caracteres')
+            }
+            else{
+                return res.redirect(/)
+            }
         }
+
+    
         let passwordEncriptada = bcrypt.hashSync(password,10);
         db.User.create({
             email: email,
@@ -23,9 +36,6 @@ let usersController = {
             fecha: fecha,
             dni: dni,
             foto: foto
-        })
-        .then(function(){
-            return res.redirect('/');
         })
         .catch(function(error){
             return res.send(error)
