@@ -10,13 +10,7 @@ module.exports = function (sequelize, dataTypes){
             type: dataTypes.INTEGER
         },
         texto: {
-            type: dataTypes.STRING
-        },
-        created_at : {
-            type: dataTypes.DATE,
-        },
-        updated_at: {
-            type: dataTypes.DATE,
+            type: dataTypes.STRING(255)
         },
     };
     let config = {
@@ -25,5 +19,12 @@ module.exports = function (sequelize, dataTypes){
         underscored:true
     };
     const Comment = sequelize.define(alias,cols,config);
+
+    Comment.associate = function(models) {
+        Comment.belongsTo(models.User, {
+            as: "usuarios",
+            foreignKey: "usuario_id"
+        });
+    }
     return Comment
 }

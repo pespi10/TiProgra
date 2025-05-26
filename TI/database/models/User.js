@@ -8,10 +8,10 @@ module.exports = function (sequelize, dataTypes){
             type: dataTypes.INTEGER
         },
         email: {
-            type: dataTypes.STRING
+            type: dataTypes.STRING(50)
         },
         password: {
-            type: dataTypes.STRING
+            type: dataTypes.STRING(50)
         },
         fecha: {
             type: dataTypes.DATE
@@ -20,16 +20,7 @@ module.exports = function (sequelize, dataTypes){
             type: dataTypes.INTEGER
         },
         foto: {
-            type: dataTypes.STRING
-        },
-        remember_token: {
-            type: dataTypes.STRING
-        },
-        created_at : {
-            type: dataTypes.DATE,
-        },
-        updated_at: {
-            type: dataTypes.DATE,
+            type: dataTypes.STRING(50)
         },
     }
 
@@ -40,6 +31,17 @@ module.exports = function (sequelize, dataTypes){
     };
 
     const User = sequelize.define(alias, cols, config);
+
+    User.associate = function(models) {
+        User.hasMany(models.Producto,{
+            as: "productos",
+            foreingKey: "usuario_id"
+        })
+        User.hasMany(models.Comment,{
+            as:"comentarios",
+            foreingKey: "usuario_id"
+        })
+    }
 
     return User;
 

@@ -11,19 +11,13 @@ module.exports = function (sequelize, dataTypes){
             type: dataTypes.INTEGER
         },
         nombreArchivoImg: {
-            type: dataTypes.STRING
+            type: dataTypes.STRING(50)
         },
         nombre: {
-            type: dataTypes.STRING
+            type: dataTypes.STRING(50)
         },
         descripcion: {
-            type: dataTypes.STRING
-        },
-        created_at : {
-            type: dataTypes.DATE,
-        },
-        updated_at: {
-            type: dataTypes.DATE,
+            type: dataTypes.STRING(100)
         },
     }
 
@@ -34,7 +28,13 @@ module.exports = function (sequelize, dataTypes){
     };
 
     const Producto = sequelize.define(alias, cols, config);
-
+    
+    Producto.associate = function(models) {
+        Producto.belongsTo(models.User, {
+            as: "usuarios",
+            foreignKey: "usuario_id"
+        });
+    }
     return Producto;
 
 }
