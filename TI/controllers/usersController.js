@@ -26,6 +26,10 @@ let usersController = {
         return res.send('La contraseña debe tener al menos 3 caracteres');
     }
 
+    if (!username) {
+        return res.send('El nombre de usuario no puede estar vacío');
+    }
+
         db.User.findOne({where:{email}})
         .then(function(resultado){
             if (resultado){
@@ -33,6 +37,7 @@ let usersController = {
             }
             let passwordEncriptada = bcrypt.hashSync(password,10);
         db.User.create({
+            username: username,
             email: email,
             password: passwordEncriptada,
             fecha: fecha,
