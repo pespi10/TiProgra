@@ -3,6 +3,9 @@ let bcrypt = require ('bcryptjs');
 
 let usersController = {
     show: function(req, res) {
+        if (req.session.user) {
+            return res.redirect('/'); 
+        }
         res.render('register.ejs')
     },
 
@@ -12,24 +15,22 @@ let usersController = {
         const fecha = req.body.fecha
         const dni = req.body.dni
         const foto = req.body.foto
+        
+
+    if (!email) {
+        return res.send('El campo de email está vacío');
+    }
+
+    if (password.length < 3) {
+        return res.send('La contraseña debe tener al menos 3 caracteres');
+    }
+
         db.User.findOne({where:{email}})
-        .then(function(resultado)){
+        .then(function(resultado){
             if (resultado){
                 return res.send('el usuario ya existe')
             }
-            else if(resultado == null){
-                return res.send('Completa el campo')
-            }
-            else if (password.length < 3){
-                return res.send('Contra tiene que tener mas de 3 caracteres')
-            }
-            else{
-                return res.redirect(/)
-            }
-        }
-
-    
-        let passwordEncriptada = bcrypt.hashSync(password,10);
+            let passwordEncriptada = bcrypt.hashSync(password,10);
         db.User.create({
             email: email,
             password: passwordEncriptada,
@@ -37,9 +38,16 @@ let usersController = {
             dni: dni,
             foto: foto
         })
+        .then(function() {
+            return res.redirect('/');
+        })
         .catch(function(error){
             return res.send(error)
-        })       
+        })    
+        })
+
+    
+           
     },
 
     login: function(req, res){
@@ -50,9 +58,9 @@ let usersController = {
     processLogin: function(req,res){
         let emaildb = req.body.mail
         db.User.findOne({
-            where:[{
-                mail: emaildb
-            }]
+            where:{
+                email: emaildb
+            }
         })
         .then(function(user){
             if(user){
