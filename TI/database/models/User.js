@@ -7,10 +7,11 @@ module.exports = function (sequelize, dataTypes){
             primaryKey: true,
             type: dataTypes.INTEGER
         },
-        email: {
-            type: dataTypes.STRING(50)
+        mail: {
+            type: dataTypes.STRING(50),
+            unique: true
         },
-        password: {
+        contrasena: {
             type: dataTypes.STRING(50)
         },
         fecha: {
@@ -25,9 +26,8 @@ module.exports = function (sequelize, dataTypes){
     }
 
     let config = {
-        tableName : "users",
-        timestamps:true,
-        underscored: true,
+        tableName : "usuarios",
+        timestamps: true,
     };
 
     const User = sequelize.define(alias, cols, config);
@@ -35,11 +35,11 @@ module.exports = function (sequelize, dataTypes){
     User.associate = function(models) {
         User.hasMany(models.Producto,{
             as: "productos",
-            foreingKey: "usuario_id"
+            foreignKey: "usuario_id"
         })
         User.hasMany(models.Comment,{
             as:"comentarios",
-            foreingKey: "usuario_id"
+            foreignKey: "usuario_id"
         })
     }
 

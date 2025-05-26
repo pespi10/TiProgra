@@ -9,10 +9,20 @@ let usersController = {
     create: function(req, res){
         const email = req.body.mail
         const password = req.body.contrasena
+        const fecha = req.body.fecha
+        const dni = req.body.dni
+        const foto = req.body.foto
+
+        if (password.length < 3) {
+            return res.send('La contraseña debe tener al menos 3 caracteres')
+        }
         let passwordEncriptada = bcrypt.hashSync(password,10);
         db.User.create({
             email: email,
-            password: passwordEncriptada
+            password: passwordEncriptada,
+            fecha: fecha,
+            dni: dni,
+            foto: foto
         })
         .then(function(){
             return res.redirect('/');
@@ -31,12 +41,12 @@ let usersController = {
         let emaildb = req.body.mail
         db.User.findOne({
             where:[{
-                email: emaildb
+                mail: emaildb
             }]
         })
         .then(function(user){
             if(user){
-                if(bcrypt.compareSync(req.body.password, user.password)){
+                if(bcrypt.compareSync(req.body.contrasena, user.password)){
                     req.session.user=user
                     if(req.body.remember_token){
                         res.cookie("recordame", user.id, {maxAge: 1000*60*40 })
