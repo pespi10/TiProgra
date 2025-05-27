@@ -33,24 +33,18 @@
             </ul>
 
             <ul class="right-navbar">
-                <li><a href="/profile">
-                        <%= usuario.nombre %><i class="fas fa-user"></i>
+                <li><a href="/users/perfil">
+                        <%= user.username %><i class="fas fa-user"></i>
                     </a>
                 </li>
                 <li>
-                    <form action="" method="post">
+                    <form action="/users/logout" method="post">
                         <button class="logout" type="submit">
                             Cerrar sesión <i class="fas fa-sign-in-alt"></i>
                         </button>
                     </form>
                 </li>
-                <!-- Solo deslogueado <li>
-                    <a href="register.html">Creá tu cuenta <i class="far fa-address-card"></i>
-                    </a>
-                </li>
-                <li>
-                    <a href="login.html">Ingresá <i class="fas fa-sign-in-alt"></i></a>
-                </li> -->
+              
             </ul>
         </nav>
     </div>

@@ -27,6 +27,11 @@ app.use(session({
   saveUninitialized:true
 }))
 
+app.use(function(req, res, next){
+  res.locals.user= req.session.user || null;
+  next();
+})
+
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/products', productsRouter);

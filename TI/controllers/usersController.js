@@ -12,7 +12,7 @@ let usersController = {
     create: function(req, res){
         const username = req.body.username;
         const email = req.body.mail
-        const password = req.body.contrasena
+        const password = req.body.password
         const fecha = req.body.fecha
         const dni = req.body.dni
         const foto = req.body.foto
@@ -22,7 +22,7 @@ let usersController = {
         return res.send('El campo de email está vacío');
     }
 
-    if (password.length < 3) {
+    if (!password || password.length < 3) {
         return res.send('La contraseña debe tener al menos 3 caracteres');
     }
 
@@ -57,6 +57,9 @@ let usersController = {
     },
 
     login: function(req, res){
+        if (req.session.user) {
+            return res.redirect('/users/perfil');
+        }
         res.render("login.ejs")
 
     },
@@ -70,7 +73,7 @@ let usersController = {
         })
         .then(function(user){
             if(user){
-                if(bcrypt.compareSync(req.body.contrasena, user.password)){
+                if(bcrypt.compareSync(req.body.password, user.password)){
                     req.session.user=user
                     if(req.body.remember_token){
                         res.cookie("recordame", user.id, {maxAge: 1000*60*40 })
@@ -95,7 +98,15 @@ let usersController = {
             res.clearCookie('recordame');
         }
         return res.redirect('/')
+    },
+
+    perfil: function(req, res) {
+        if (!req.session.user) {
+            return res.redirect('/users/login');
+        }
+        res.render('profile.ejs', { user: req.session.user });
     }
+    
 
   };
 
