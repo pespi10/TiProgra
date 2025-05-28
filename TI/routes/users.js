@@ -10,6 +10,6 @@ router.get('/login', usersController.login);
 router.post('/processLogin', usersController.processLogin); 
 router.post('/logout' , usersController.logout);
 
-router.get('/perfil', usersController.perfil);
+router.get('/perfil/:id', usersController.perfil);
 
 module.exports = router;

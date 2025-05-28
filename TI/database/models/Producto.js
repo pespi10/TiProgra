@@ -23,14 +23,15 @@ module.exports = function (sequelize, dataTypes){
 
     let config = {
         tableName : "productos",
-        timestamps:true,
+        timestamps: false,
+        underscored:true
     };
 
     const Producto = sequelize.define(alias, cols, config);
     
     Producto.associate = function(models) {
         Producto.belongsTo(models.User, {
-            as: "usuarios",
+            as: "usuario",
             foreingKey: "usuario_id"
         });
     }

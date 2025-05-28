@@ -6,7 +6,7 @@ let usersController = {
         if (req.session.user) {
             return res.redirect('/'); 
         }
-        res.render('register.ejs')
+        res.render('register.ejs',{mensaje:null})
     },
 
     create: function(req, res){
@@ -17,26 +17,13 @@ let usersController = {
         const dni = req.body.dni
         const foto = req.body.foto
         
-
-    if (!email) {
-        return res.send('El campo de email está vacío');
-    }
-
-    if (!password || password.length < 3) {
-        return res.send('La contraseña debe tener al menos 3 caracteres');
-    }
-
-    if (!username) {
-        return res.send('El nombre de usuario no puede estar vacío');
-    }
-
         db.User.findOne({where:{email}})
-        .then(function(resultado){
-            if (resultado){
-                return res.send('el usuario ya existe')
+     .then(function(resultado){           
+          if (resultado){
+                return res.render('register.ejs',{mensaje:'el usuario ya existe'})
             }
-            let passwordEncriptada = bcrypt.hashSync(password,10);
-        db.User.create({
+           let passwordEncriptada = bcrypt.hashSync(password,10);
+      db.User.create({
             username: username,
             email: email,
             password: passwordEncriptada,
@@ -44,11 +31,11 @@ let usersController = {
             dni: dni,
             foto: foto
         })
-        .then(function() {
-            return res.redirect('/');
+     .then(function() {
+         return res.redirect('/');
         })
-        .catch(function(error){
-            return res.send(error)
+     .catch(function(error){
+         return res.send(error)
         })    
         })
 
@@ -101,10 +88,24 @@ let usersController = {
     },
 
     perfil: function(req, res) {
-        if (!req.session.user) {
-            return res.redirect('/users/login');
-        }
-        res.render('profile.ejs', { user: req.session.user });
+
+        
+        const userId = req.params.id;
+    
+        db.User.findByPk(userId, {
+            include: [{ 
+                association: "productos" 
+            }]
+        })
+        .then(function(usuario) {
+            if (!usuario) {
+                return res.redirect('/');
+            }
+            res.render('profile.ejs', { 
+                user: usuario,
+                productos: usuario.productos
+            });
+        });
     }
     
 
