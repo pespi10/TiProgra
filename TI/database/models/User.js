@@ -27,12 +27,14 @@ module.exports = function (sequelize, dataTypes){
         foto: {
             type: dataTypes.STRING(50)
         },
+        remember_token: {
+            type: dataTypes.BOOLEAN
+        }
     }
 
     let config = {
         tableName : "users",
         timestamps: true,
-        underscored: true
     };
 
     const User = sequelize.define(alias, cols, config);

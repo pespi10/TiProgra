@@ -16,7 +16,6 @@ module.exports = function (sequelize, dataTypes){
     let config = {
         tableName: "comentarios",
         timestamps: true,
-        underscored:true
     };
     const Comment = sequelize.define(alias,cols,config);
 
