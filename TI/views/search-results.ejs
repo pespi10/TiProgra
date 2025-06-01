@@ -8,58 +8,49 @@
 	<%- include("./partials/header.ejs")%>
 	<!-- /Header -->
 
-	<!-- Novedades -->
+	<!-- Resultados de búsqueda -->
 	<div class="container products-wrapper">
 		<div class="row">
 			<div class="col-12">
 				<h2 class="products-title">Resultados de búsqueda</h2>
 			</div>
-			<!-- Show the "ultimos" products -->
+
 			<% if (mensaje) { %>
 				<div class="col-12">
 					<p><%= mensaje %></p>
 				</div>
 			<% } %>
+
 			<% if (productos.length > 0) { %>
 				<% productos.forEach(function(producto) { %>
 					<div class="col-12 col-sm-6 col-lg-3">
 						<section class="product-box">
 							<a href="/products/product/<%= producto.id %>">
 								<figure class="product-box_image">
-									<img src="<%= producto.nombre_archivo_img %>" alt="">
+									<img src="<%= producto.nombre_archivo_img %>" alt="<%= producto.nombre %>">
 								</figure>
 								<article class="product-box_data">
 									<h2><%= producto.nombre %></h2>
 									<p><%= producto.descripcion %></p>
-									<p>Por: <a href="/users/perfil/<%= producto.usuario.id %>"><%= producto.usuario.username %></a></p>
+									<p>
+										Por: 
+										<a href="/users/perfil/<%= producto.usuario.id %>">
+											<%= producto.usuario.username %>
+										</a>
+									</p>
+									
 								</article>
 							</a>
 						</section>
 					</div>
 				<% }); %>
 			<% } %>
-			<!-- 		 
-				<div class="col-12 col-sm-6 col-lg-3">
-					<section class="product-box">
-						<a href="/product/<%= productos.id %>">
-							<figure class="product-box_image">
-								<img src="<%= productos.imagen %>" alt="<%= productos.nombre %>">
-							  </figure>
-							  <article class="product-box_data">
-								<h2><%= productos.nombre %></h2>
-								<p><%= productos.descripcion %></p>
-								<p>Comentarios: <%= productos.comentarios.length %></p>
-							  </article>
-					  </a>
-					</section>
-				  </div>
-				 -->
-		
-
+		</div>
+	</div>
+	<!-- /Resultados -->
 
 	<!-- footer -->
 	<%- include("./partials/footer") %>
 	<!-- /footer -->
 </body>
-
 </html>

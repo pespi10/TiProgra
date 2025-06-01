@@ -2,7 +2,7 @@ USE base;
 CREATE TABLE usuarios(  
 id INT UNSIGNED PRIMARY KEY AUTO_INCREMENT,
 username VARCHAR(50) DEFAULT NULL,  
-email VARCHAR(50) UNIQUE NOT NULL,     
+eemail VARCHAR(50) UNIQUE NOT NULL,     
 password VARCHAR(255) NOT NULL,      
 fecha DATE,     
 dni INT UNSIGNED,     
@@ -36,20 +36,20 @@ FOREIGN KEY (usuario_id) REFERENCES usuarios(id)
 );
 
 
-INSERT INTO usuarios (mail, contrasena, fecha, dni, foto) 
-VALUES ('juan.perez@gmail.com', '123456', '1990-05-15', 31456789, '/images/users/trala.png');
+INSERT INTO usuarios (email, password, fecha, dni, foto) 
+VALUES ('juan.perez@gemail.com', '123456', '1990-05-15', 31456789, '/images/users/trala.png');
 
-INSERT INTO usuarios (mail, contrasena, fecha, dni, foto) 
-VALUES ('ana.garcia@gmail.com', 'abc123', '1992-07-20', 32456123, '/images/users/trala.png');
+INSERT INTO usuarios (email, password, fecha, dni, foto) 
+VALUES ('ana.garcia@gemail.com', 'abc123', '1992-07-20', 32456123, '/images/users/trala.png');
 
-INSERT INTO usuarios (mail, contrasena, fecha, dni, foto) 
-VALUES ('carlos.lopez@gmail.com', 'pass456', '1988-03-10', 28789456, '/images/users/trala.png');
+INSERT INTO usuarios (email, password, fecha, dni, foto) 
+VALUES ('carlos.lopez@gemail.com', 'pass456', '1988-03-10', 28789456, '/images/users/trala.png');
 
-INSERT INTO usuarios (mail, contrasena, fecha, dni, foto) 
-VALUES ('maria.rodriguez@gmail.com', 'secure789', '1995-11-25', 35123789, '/images/users/trala.png');
+INSERT INTO usuarios (email, password, fecha, dni, foto) 
+VALUES ('maria.rodriguez@gemail.com', 'secure789', '1995-11-25', 35123789, '/images/users/trala.png');
 
-INSERT INTO usuarios (mail, contrasena, fecha, dni, foto) 
-VALUES ('roberto.fernandez@gmail.com', 'r0b3rt0', '1985-09-05', 27456123, '/images/users/trala.png');
+INSERT INTO usuarios (email, password, fecha, dni, foto) 
+VALUES ('roberto.fernandez@gemail.com', 'r0b3rt0', '1985-09-05', 27456123, '/images/users/trala.png');
 
 
 
