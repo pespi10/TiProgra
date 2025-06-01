@@ -2,9 +2,16 @@ let db = require("../database/models");
 let bcrypt = require ('bcryptjs');
 
 const mainController = {
-  index:function(req, res) {
-    res.render('index',{productos:productos, usuario:usuario});
-  },
+  index: function(req, res) {
+    db.Producto.findAll({
+      include: [{ association: "usuario" }]
+    })
+    .then(function(productos) {
+      res.render('index', {
+        productos: productos,
+        usuario: req.session.user || null
+      });
+    })},
   searchResults: function(req, res) {
     const busqueda = req.query.search;
     

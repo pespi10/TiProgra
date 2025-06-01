@@ -61,7 +61,12 @@ let usersController = {
         .then(function(user){
             if(user){
                 if(bcrypt.compareSync(req.body.password, user.password)){
-                    req.session.user=user
+                    req.session.user = {
+                        id: user.id,
+                        username: user.username,
+                        email: user.email,
+                        foto: user.foto
+                    };
                     if(req.body.remember_token){
                         res.cookie("recordame", user.id, {maxAge: 1000*60*40 })
                     }

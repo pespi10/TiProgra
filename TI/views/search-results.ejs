@@ -31,29 +31,29 @@
 								<article class="product-box_data">
 									<h2><%= producto.nombre %></h2>
 									<p><%= producto.descripcion %></p>
-									<p>Por: <a href="/users/perfil/<%= producto.usuarios.id %>"><%= producto.usuarios.username %></a></p>
+									<p>Por: <a href="/users/perfil/<%= producto.usuario.id %>"><%= producto.usuario.username %></a></p>
 								</article>
 							</a>
 						</section>
 					</div>
 				<% }); %>
 			<% } %>
-			<!--<% for( let i = 0; i < 10; i++ ) { %>			 
+			<!-- 		 
 				<div class="col-12 col-sm-6 col-lg-3">
 					<section class="product-box">
-						<a href="/product/<%= productos[i].id %>">
+						<a href="/product/<%= productos.id %>">
 							<figure class="product-box_image">
-								<img src="<%= productos[i].imagen %>" alt="<%= productos[i].nombre %>">
+								<img src="<%= productos.imagen %>" alt="<%= productos.nombre %>">
 							  </figure>
 							  <article class="product-box_data">
-								<h2><%= productos[i].nombre %></h2>
-								<p><%= productos[i].descripcion %></p>
-								<p>Comentarios: <%= productos[i].comentarios.length %></p>
+								<h2><%= productos.nombre %></h2>
+								<p><%= productos.descripcion %></p>
+								<p>Comentarios: <%= productos.comentarios.length %></p>
 							  </article>
 					  </a>
 					</section>
 				  </div>
-				  <% } %>-->
+				 -->
 		
 
 

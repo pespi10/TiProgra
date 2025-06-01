@@ -9,6 +9,9 @@ router.post('/newuser', usersController.create);
 router.get('/login', usersController.login);
 router.post('/processLogin', usersController.processLogin); 
 router.post('/logout' , usersController.logout);
+router.get('/perfil', function(req, res) {
+    res.redirect(`/users/perfil/${req.session.user.id}`);
+});
 
 router.get('/perfil/:id', usersController.perfil);
 
