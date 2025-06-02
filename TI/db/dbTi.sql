@@ -87,95 +87,35 @@ VALUES (4, '/images/products/impresora.jpg', 'impresora multifunción', 'impresi
 
 
 
-INSERT INTO comentarios (usuarioId, texto) 
-VALUES (2, 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.');
+INSERT INTO comentarios (usuarioId, productoId, texto) 
+VALUES (2,1, 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.');
 
-INSERT INTO comentarios (usuarioId, texto) 
-VALUES (3, 'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.');
+INSERT INTO comentarios (usuarioId,productoId, texto) 
+VALUES (3,2, 'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.');
 
-INSERT INTO comentarios (usuarioId, texto) 
-VALUES (4, 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.');
+INSERT INTO comentarios (usuarioId,productoId, texto) 
+VALUES (4, 3,'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.');
 
-INSERT INTO comentarios (usuarioId, texto) 
-VALUES (1, 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.');
+INSERT INTO comentarios (usuarioId,productoId, texto) 
+VALUES (1, 4,'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.');
 
-INSERT INTO comentarios (usuarioId, texto) 
-VALUES (3, 'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.');
+INSERT INTO comentarios (usuarioId,productoId, texto) 
+VALUES (3, 5,'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.');
 
-INSERT INTO comentarios (usuarioId, texto) 
-VALUES (5, 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.');
+INSERT INTO comentarios (usuarioId,productoId, texto) 
+VALUES (6, 6,'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.');
 
-INSERT INTO comentarios (usuarioId, texto) 
-VALUES (1, 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.');
+INSERT INTO comentarios (usuarioId, productoId,texto) 
+VALUES (1, 7,'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.');
 
-INSERT INTO comentarios (usuarioId, texto) 
-VALUES (2, 'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.');
+INSERT INTO comentarios (usuarioId,productoId, texto) 
+VALUES (2, 8,'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.');
 
-INSERT INTO comentarios (usuarioId, texto) 
-VALUES (4, 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.');
+INSERT INTO comentarios (usuarioId,productoId, texto) 
+VALUES (4, 9,'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.');
 
-INSERT INTO comentarios (usuarioId, texto) 
-VALUES (5, 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.');
-
-INSERT INTO comentarios (usuarioId, texto) 
-VALUES (1, 'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.');
-
-INSERT INTO comentarios (usuarioId, texto) 
-VALUES (3, 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.');
-
-INSERT INTO comentarios (usuarioId, texto) 
-VALUES (2, 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.');
-
-INSERT INTO comentarios (usuarioId, texto) 
-VALUES (4, 'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.');
-
-INSERT INTO comentarios (usuarioId, texto) 
-VALUES (5, 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.');
-
-INSERT INTO comentarios (usuarioId, texto) 
-VALUES (3, 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.');
-
-INSERT INTO comentarios (usuarioId, texto) 
-VALUES (1, 'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.');
-
-INSERT INTO comentarios (usuarioId, texto) 
-VALUES (2, 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.');
-
-INSERT INTO comentarios (usuarioId, texto) 
-VALUES (4, 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.');
-
-INSERT INTO comentarios (usuarioId, texto) 
-VALUES (5, 'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.');
-
-INSERT INTO comentarios (usuarioId, texto) 
-VALUES (1, 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.');
-
-INSERT INTO comentarios (usuarioId, texto) 
-VALUES (2, 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.');
-
-INSERT INTO comentarios (usuarioId, texto) 
-VALUES (3, 'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.');
-
-INSERT INTO comentarios (usuarioId, texto) 
-VALUES (5, 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.');
-
-INSERT INTO comentarios (usuarioId, texto) 
-VALUES (1, 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.');
-
-INSERT INTO comentarios (usuarioId, texto) 
-VALUES (4, 'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.');
-
-INSERT INTO comentarios (usuarioId, texto) 
-VALUES (3, 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.');
-
-INSERT INTO comentarios (usuarioId, texto) 
-VALUES (5, 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.');
-
-INSERT INTO comentarios (usuarioId, texto) 
-VALUES (2, 'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.');
-
-INSERT INTO comentarios (usuarioId, texto) 
-VALUES (4, 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.');
+INSERT INTO comentarios (usuarioId,productoId, texto) 
+VALUES (6, 10,'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.');
 
 
 
