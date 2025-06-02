@@ -29,7 +29,7 @@ const mainController = {
         }
       },
       include: [{ 
-        association: "usuario" 
+        association: "users" 
       }]
     })
     .then(function(productos) {
