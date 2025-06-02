@@ -29,12 +29,15 @@
         <nav class="main-navbar">
             <ul class="left-navbar">
                 <li><a href="/">Todos los productos</a></li>
+
                 <li><form action="/product/add" method="post">
                     <button class="logout" type="submit">
                         cargar producto </i>
                     </button>
                 </form></li>
+
             </ul>
+
 
             <ul class="right-navbar">
                 <li><a href="/users/perfil/<%=locals.user.id%>">
