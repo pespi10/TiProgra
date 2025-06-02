@@ -20,8 +20,13 @@ let usersController = {
         db.User.findOne({where:{email}})
      .then(function(resultado){           
           if (resultado){
-                return res.render('register.ejs',{mensaje:'el usuario ya existe'})
+                return res.render('register.ejs',{mensaje:'el email ya esta siendo usado'})
             }
+
+            if (!password || password.length < 3) {
+                return res.render('register.ejs', { mensaje: 'La contraseña debe tener al menos 3 caracteres' });
+            }
+
            let passwordEncriptada = bcrypt.hashSync(password,10);
       db.User.create({
             username: username,
@@ -47,7 +52,7 @@ let usersController = {
         if (req.session.user) {
             return res.redirect('/users/perfil');
         }
-        res.render("login.ejs")
+        res.render("login.ejs", { mensaje: null });
 
     },
 
@@ -68,10 +73,10 @@ let usersController = {
                     res.redirect('/')
                 
                 } else {
-                    res.send('Contraseña no existe')
+                    return res.render("login.ejs", {mensaje: 'Contraseña no es correcta'})
                 }
             } else {
-                res.send('No se encontro un mail')
+                return res.render("login.ejs", {mensaje: 'El email no es correcto'})
             }
         })
         .catch(function(error){
