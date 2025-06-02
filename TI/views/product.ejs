@@ -10,44 +10,30 @@
 	<!-- product detail -->
 	<div class="container products-wrapper">
 		<div class="d-flex align-items-center">
-			<h2 class="products-title">Nombre del producto</h2> 
+			<h2 class="products-title"><%= producto.nombre %></h2> 
 			<p class="product-detail-description">
-				<a href="/productAdd">Editar</a>
+				<a href="/product/productAdd">Editar</a>
 			</p>
 		</div>
 		<div class="product-detail">
 			<div class="row">
 				<article class="col-12 col-lg-8 product-detail-info">
-					<img src=<%= productos[0].imagen %> alt="" class="product-detail-img">
-					<p class="product-detail-description"><%= productos[0].descripcion %></p>
+					<img src="<%= producto.nombreArchivoImg %>" alt="" class="product-detail-img">
+					<p class="product-detail-description"><%= producto.descripcion %></p>
+					<a href="/users/perfil/<%= producto.users.id %>"><%= producto.users.email %></a>
 				</article>
 				<div class="col-12 col-lg-4">
 					<section class="comments">
-						<article>
-							<img src=<%= productos[0].comentarios[0].imagenPerfil %> alt="">
-							<div class="data">
-								<p class="user">
-								<strong> <a href="/searchResults"><%= productos[0].comentarios[0].usuario %>: </a> </strong>
-								 <%= productos[0].comentarios[0].userComment %> </p>
-							</div>
-						</article>
-						<article>
-							<img src=<%= productos[0].comentarios[1].imagenPerfil %> alt="">
-							<div class="data">
-								<p class="user">
-									<strong> <a href="/profile"><%= productos[0].comentarios[1].usuario %>: </a> </strong>
-									<%= productos[0].comentarios[1].userComment %>.</p>
-							</div>
-						</article>
-						<article>
-							<img src=<%= productos[0].comentarios[2].imagenPerfil %> alt="">
-							<div class="data">
-								<p class="user">
-									<strong> <a href="/profile"><%= productos[0].comentarios[2].usuario %>: </a> </strong>
-									<%= productos[0].comentarios[2].userComment %> 
-									</p>
-							</div>
-						</article>
+						<% for( let i = 0; i < producto.comentarios.length; i++ ) { %>
+							<article>
+								<img src="<%= producto.comentarios[i].users.foto %>" alt="">
+								<div class="data">
+									<p class="user">
+									<strong> <a href="/users/perfil/<%= producto.comentarios[i].users.id %>"><%= producto.comentarios[i].users.email %>: </a> </strong>
+									 <%= producto.comentarios[i].texto %> </p>
+								</div>
+							</article>
+						<% } %>
 
 					</section>
 					<form class="form" action="" method="POST">

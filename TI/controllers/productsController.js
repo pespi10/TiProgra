@@ -8,17 +8,19 @@ const productsController = {
         db.Producto.findByPk(id, {
             include: [
                 { association: "users" },
-                { association: "comentarios" }
+                { association: "comentarios",
+                    include: [{association:"users"}]
+                }
             ]
         })
-      .then(function(producto) {
+      .then(function(producto) { 
         if (producto) {
             res.render('product.ejs', {
                 producto: producto
               });
         }
         })
-        .catch(function(error){
+      .catch(function(error){
           return res.send(error)
       })
     },
