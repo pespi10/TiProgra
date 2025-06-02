@@ -6,7 +6,7 @@ module.exports = function (sequelize, dataTypes){
             primaryKey: true,
             type: dataTypes.INTEGER
         },
-        usuario_id: {
+        usuarioId: {
             type: dataTypes.INTEGER
         },
         texto: {
@@ -16,14 +16,14 @@ module.exports = function (sequelize, dataTypes){
     let config = {
         tableName: "comentarios",
         timestamps: true,
-        underscored:true
+        underscored:false
     };
     const Comment = sequelize.define(alias,cols,config);
 
     Comment.associate = function(models) {
         Comment.belongsTo(models.User, {
-            as: "usuarios",
-            foreignKey: "usuario_id"
+            as: "users",
+            foreignKey: "usuarioId"
         });
     }
     return Comment

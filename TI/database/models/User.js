@@ -12,7 +12,7 @@ module.exports = function (sequelize, dataTypes){
             unique: true
         },
         email: {
-            type: dataTypes.STRING(50),
+            type: dataTypes.STRING(255),
             unique: true
         },
         password: {
@@ -25,15 +25,15 @@ module.exports = function (sequelize, dataTypes){
             type: dataTypes.INTEGER
         },
         foto: {
-            type: dataTypes.STRING(50)
+            type: dataTypes.STRING(255)
         },
-        remember_token: {
+        rememberToken: {
             type: dataTypes.BOOLEAN
         }
     }
 
     let config = {
-        tableName : "usuarios",
+        tableName : "users",
         timestamps: true,
         underscored:false
     };
@@ -43,11 +43,11 @@ module.exports = function (sequelize, dataTypes){
     User.associate = function(models) {
         User.hasMany(models.Producto,{
             as: "productos",
-            foreignKey: "usuario_id"
+            foreignKey: "usuarioId"
         })
         User.hasMany(models.Comment,{
             as:"comentarios",
-            foreignKey: "usuario_id"
+            foreignKey: "usuarioId"
         })
     }
 

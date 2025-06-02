@@ -49,7 +49,7 @@ VALUES ('carlos.lopez@gemail.com', 'pass456', '1988-03-10', 28789456, '/images/u
 INSERT INTO users (email, password, fecha, dni, foto, rememberToken) 
 VALUES ('maria.rodriguez@gemail.com', 'secure789', '1995-11-25', 35123789, '/images/users/trala.png', 1);
 
-INSERT INTO usuarios (email, password, fecha, dni, foto, rememberToken) 
+INSERT INTO users (email, password, fecha, dni, foto, rememberToken) 
 VALUES ('roberto.fernandez@gemail.com', 'r0b3rt0', '1985-09-05', 27456123, '/images/users/trala.png', 1);
 
 
@@ -180,7 +180,7 @@ VALUES (4, 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillu
 
 
 select * from productos;
-select * from usuarios;
+select * from users;
 select * from comentarios;
 
 
