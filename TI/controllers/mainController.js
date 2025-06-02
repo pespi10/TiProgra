@@ -4,7 +4,9 @@ let bcrypt = require ('bcryptjs');
 const mainController = {
   index: function(req, res) {
     db.Producto.findAll({
-      include: [{ association: "users" }]
+      include: [{ association: "users" },
+        {association:"comentarios"}
+      ]
     })
     .then(function(productos) {
       res.render('index', {

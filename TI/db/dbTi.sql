@@ -1,4 +1,4 @@
-CREATE SCHEMA base;
+CREATE SCHEMA base
 USE base;
 CREATE TABLE users(  
 id INT UNSIGNED PRIMARY KEY AUTO_INCREMENT,
@@ -49,7 +49,7 @@ VALUES ('carlos.lopez@gemail.com', 'pass456', '1988-03-10', 28789456, '/images/u
 INSERT INTO users (email, password, fecha, dni, foto, rememberToken) 
 VALUES ('maria.rodriguez@gemail.com', 'secure789', '1995-11-25', 35123789, '/images/users/trala.png', 1);
 
-INSERT INTO users (email, password, fecha, dni, foto, rememberToken) 
+INSERT INTO usuarios (email, password, fecha, dni, foto, rememberToken) 
 VALUES ('roberto.fernandez@gemail.com', 'r0b3rt0', '1985-09-05', 27456123, '/images/users/trala.png', 1);
 
 
@@ -86,41 +86,55 @@ INSERT INTO productos (usuarioId, nombreArchivoImg, nombre, descripcion)
 VALUES (4, '/images/products/impresora.jpg', 'impresora multifunción', 'impresión a color, scanner, wifi, impresión a doble cara');
 
 
+INSERT INTO comentarios (usuarioId, productoId, texto) 
+VALUES (2, 1, 'Excelente teclado, muy cómodo para escribir y las luces RGB se ven increíbles');
 
 INSERT INTO comentarios (usuarioId, productoId, texto) 
-VALUES (2,1, 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.');
+VALUES (3, 1, 'Los switches mecánicos son muy responsivos, lo recomiendo 100%');
 
-INSERT INTO comentarios (usuarioId,productoId, texto) 
-VALUES (3,2, 'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.');
+INSERT INTO comentarios (usuarioId, productoId, texto) 
+VALUES (1, 2, 'El mouse tiene muy buena precisión, perfecto para gaming');
 
-INSERT INTO comentarios (usuarioId,productoId, texto) 
-VALUES (4, 3,'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.');
+INSERT INTO comentarios (usuarioId, productoId, texto) 
+VALUES (4, 2, 'La calidad del sensor óptico es excelente, muy suave el movimiento');
 
-INSERT INTO comentarios (usuarioId,productoId, texto) 
-VALUES (1, 4,'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.');
+INSERT INTO comentarios (usuarioId, productoId, texto) 
+VALUES (6, 3, 'El monitor curvo es impresionante, los colores se ven muy vivos');
 
-INSERT INTO comentarios (usuarioId,productoId, texto) 
-VALUES (3, 5,'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.');
+INSERT INTO comentarios (usuarioId, productoId, texto) 
+VALUES (2, 3, 'La experiencia de gaming con 144Hz es increíble, no hay lag');
 
-INSERT INTO comentarios (usuarioId,productoId, texto) 
-VALUES (6, 6,'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.');
+INSERT INTO comentarios (usuarioId, productoId, texto) 
+VALUES (3, 4, 'La notebook funciona muy bien, rápida y con buen rendimiento');
 
-INSERT INTO comentarios (usuarioId, productoId,texto) 
-VALUES (1, 7,'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.');
+INSERT INTO comentarios (usuarioId, productoId, texto) 
+VALUES (1, 5, 'El smartwatch es muy útil, la batería dura varios días');
 
-INSERT INTO comentarios (usuarioId,productoId, texto) 
-VALUES (2, 8,'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.');
+INSERT INTO comentarios (usuarioId, productoId, texto) 
+VALUES (4, 6, 'El parlante suena espectacular, el asistente de voz funciona perfecto');
 
-INSERT INTO comentarios (usuarioId,productoId, texto) 
-VALUES (4, 9,'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.');
+INSERT INTO comentarios (usuarioId, productoId, texto) 
+VALUES (6, 7, 'Los auriculares tienen excelente cancelación de ruido, muy cómodos');
 
-INSERT INTO comentarios (usuarioId,productoId, texto) 
-VALUES (6, 10,'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.');
+INSERT INTO comentarios (usuarioId, productoId, texto) 
+VALUES (2, 8, 'La cámara de seguridad funciona muy bien, la app es fácil de usar');
+
+INSERT INTO comentarios (usuarioId, productoId, texto) 
+VALUES (3, 9, 'La tablet es perfecta para trabajar, la pantalla se ve muy nítida');
+
+INSERT INTO comentarios (usuarioId, productoId, texto) 
+VALUES (1, 10, 'La impresora es muy eficiente, imprime rápido y con buena calidad');
+
+INSERT INTO comentarios (usuarioId, productoId, texto) 
+VALUES (4, 1, 'Me encanta la retroiluminación RGB, se puede personalizar fácilmente');
+
+INSERT INTO comentarios (usuarioId, productoId, texto) 
+VALUES (6, 5, 'El monitor de ritmo cardíaco es muy preciso durante el ejercicio');
 
 
 
 select * from productos;
-select * from users;
+select * from usuarios;
 select * from comentarios;
 
 
