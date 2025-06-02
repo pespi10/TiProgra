@@ -40,10 +40,15 @@
 						<% } %>
 					</section>
 						
-					<form class="form" action="" method="POST">
-						<input class="form-input" type="text" value="" placeholder="Agregar comentario">
-						<button type="submit" class="buy-now-button">AGREGAR COMENTARIO</button>
-					</form>
+					<% if (locals.user) { %>
+                        <form class="form" action="/product/<%= producto.id %>/comment" method="POST">
+                            <input class="form-input" type="text" name="texto" placeholder="Agregar comentario">
+                            <button type="submit" class="buy-now-button">AGREGAR COMENTARIO</button>
+                        </form>
+                    <% } else { %>
+                        <p>Para comentar debes <a href="/users/login">iniciar sesión</a></p>
+                    <% } %>
+
 						
 					<hr>
 				</div>
