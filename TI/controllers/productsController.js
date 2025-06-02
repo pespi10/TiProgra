@@ -25,10 +25,10 @@ const productsController = {
       })
     },
 
-    productAdd: function(req, res) {
-      console.log("entre en la funcion");
-      
-      return res.send('hola')
+    productAddNew: function(req, res) {
+
+   
+  
       db.Producto.create({
           nombre: req.body.nombre,
           descripcion: req.body.descripcion,
@@ -41,7 +41,11 @@ const productsController = {
       .catch(function(error){
         return res.send(error)
       });
-  }
+  },
+
+   productAdd: function(req, res) {
+     res.render('product-add.ejs'); 
+ },
  
     
 };
