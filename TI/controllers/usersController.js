@@ -32,7 +32,7 @@ let usersController = {
             foto: foto
         })
      .then(function() {
-         return res.redirect('/');
+         return res.redirect('/users/login');
         })
      .catch(function(error){
          return res.send(error)
