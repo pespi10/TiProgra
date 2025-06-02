@@ -26,19 +26,24 @@ const productsController = {
     },
 
     productAdd: function(req, res) {
-        db.Producto.create({
-            nombre: req.body.nombre,
-            descripcion: req.body.descripcion,
-            usuarioId: req.body.usuarioId,
-            nombreArchivoImg: req.body.imagen
-        })
-        .then(function() {
-            return res.redirect('/users/' + req.body.usuarioId);
-        })
-        .catch(function(error){
-          return res.send(error)
+      console.log("entre en la funcion");
+      
+      return res.send('hola')
+      db.Producto.create({
+          nombre: req.body.nombre,
+          descripcion: req.body.descripcion,
+          usuarioId: req.body.usuarioId,
+          nombreArchivoImg: req.body.imagen
       })
-    }
+      .then(function() {
+        return res.redirect(`/users/${usuarioId}`);
+       })
+      .catch(function(error){
+        return res.send(error)
+      });
+  }
+ 
+    
 };
 
 module.exports = productsController;

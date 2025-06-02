@@ -14,4 +14,3 @@ router.get('/perfil', usersController.perfil);
 router.get('/perfil/:id', usersController.perfil);
 
 module.exports = router;
- 
