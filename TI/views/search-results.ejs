@@ -5,7 +5,11 @@
 
 <body>
 	<!-- Header -->
-	<%- include("./partials/header.ejs")%>
+	<% if (!locals.user) { %>
+		<%- include("./partials/header.ejs") %>
+	  <% } else {%>
+		<%- include("./partials/headerLogeado.ejs") %>
+	  <% } %>
 	<!-- /Header -->
 
 	<!-- Resultados de búsqueda -->

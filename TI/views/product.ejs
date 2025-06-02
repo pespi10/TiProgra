@@ -4,7 +4,11 @@
 <%- include("./partials/head.ejs")%>
 <body>
 	<!-- Header -->
-	<%- include("./partials/header.ejs")%>
+	<% if (!locals.user) { %>
+		<%- include("./partials/header.ejs") %>
+	  <% } else {%>
+		<%- include("./partials/headerLogeado.ejs") %>
+	  <% } %>
 	<!-- /Header -->
 	
 	<!-- product detail -->
@@ -34,13 +38,13 @@
 								</div>
 							</article>
 						<% } %>
-
 					</section>
-					
+						<% if (locals.user) { %>
 					<form class="form" action="" method="POST">
 						<input class="form-input" type="text" value="" placeholder="Agregar comentario">
 						<button type="submit" class="buy-now-button">AGREGAR COMENTARIO</button>
 					</form>
+						<% } %>
 					<hr>
 				</div>
 			</div>
