@@ -25,6 +25,10 @@ module.exports = function (sequelize, dataTypes){
             as: "users",
             foreignKey: "usuarioId"
         });
+        Comment.belongsTo(models.Producto,{
+            as:"productos",
+            foreignKey:"productoId"
+        })
     }
     return Comment
 }
