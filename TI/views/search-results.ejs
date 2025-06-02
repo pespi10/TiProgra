@@ -21,30 +21,27 @@
 				</div>
 			<% } %>
 
-			<% if (productos.length > 0) { %>
-				<% productos.forEach(function(producto) { %>
+		
+				<% for (let i = 0; i <  productos.length; i++) { %>		 
 					<div class="col-12 col-sm-6 col-lg-3">
 						<section class="product-box">
-							<a href="/products/product/<%= producto.id %>">
+							<a href="/product/<%= productos[i].id %>">
 								<figure class="product-box_image">
-									<img src="<%= producto.nombre_archivo_img %>" alt="<%= producto.nombre %>">
-								</figure>
-								<article class="product-box_data">
-									<h2><%= producto.nombre %></h2>
-									<p><%= producto.descripcion %></p>
-									<p>
-										Por: 
-										<a href="/users/perfil/<%= producto.usuario.id %>">
-											<%= producto.usuario.username %>
-										</a>
-									</p>
-									
-								</article>
-							</a>
+									<img src="<%= productos[i].imagen %>" alt="<%= productos[i].nombre %>">
+								  </figure>
+								  <article class="product-box_data">
+									<ul>
+									<li><h2><%= productos[i].nombre %></h2></li>
+									<li><a href="users/perfil/<%=productos[i].usuarioId%>"><%= productos[i].users.email%></a></li>
+									<li><p><%= productos[i].descripcion %></p></li>
+									<li><p>Comentarios: 1</p></li>
+									</ul>
+								  </article>
+						  </a>
 						</section>
-					</div>
-				<% }); %>
-			<% } %>
+					  </div>
+					  <% } %>
+		
 		</div>
 	</div>
 	<!-- /Resultados -->
